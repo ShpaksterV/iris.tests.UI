@@ -2,19 +2,20 @@ package Constants;
 
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
-import java.util.ArrayList;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class DriverFactory {
 
     private WebDriver driver;
 
-    public WebDriver getDriver(String browserType) {
+    public WebDriver getDriver(String browserType) throws MalformedURLException {
         String name = System.getProperty("driver");
-        if (name.equals("chrome")) {
+        /*if (name.equals("chrome")) {
 
             DesiredCapabilities capabilities = DesiredCapabilities.chrome();
             String chromeProfile = "C:\\Users\\User\\AppData\\Local\\Google\\Chrome\\User Data\\Default";
@@ -23,7 +24,10 @@ public class DriverFactory {
             capabilities.setCapability("chrome.switches", switches);
             driver = new ChromeDriver(capabilities);
 
-        }
+        }*/
+            DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+            WebDriver driver = new RemoteWebDriver(new URL("http://192.168.1.64.4444/wd/hub"),capabilities);
+
         /*if (name.equals("firefox")) {
             this.driver = new FirefoxDriver();
         }*/
