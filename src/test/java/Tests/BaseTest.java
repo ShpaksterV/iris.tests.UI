@@ -6,7 +6,7 @@ import Pages.BasePage;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-import org.openqa.selenium.*;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -51,7 +51,7 @@ public class BaseTest {
     @BeforeMethod
     protected void beforeMethod() {
         driver = new DriverFactory().getDriver("chrome");
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+       driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         driver.manage().window().maximize();
 
