@@ -11,8 +11,10 @@ public class DriverFactory {
     private WebDriver driver;
 
     public WebDriver getDriver()  {
-        driver = new ChromeDriver();
-
+        String name = System.getProperty("driver");
+        if (name.equals("chrome")) {
+            driver = new ChromeDriver();
+        }
 
         this.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         this.driver.manage().window().maximize();

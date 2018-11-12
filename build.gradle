@@ -22,13 +22,15 @@ dependencies {
 }
 
 test{
-    systemProperty "webdriver.chrome.driver","src/test/WebDrivers/chromedriver"
-    systemProperty "driver", "chrome"
-    systemProperty "file.encoding", "utf-8"
+
     useTestNG() {
+        systemProperty "webdriver.chrome.driver","src/test/WebDrivers/chromedriver"
+        systemProperty "driver", "chrome"
+        systemProperty "file.encoding", "utf-8"
         useDefaultListeners = true
         suiteXmlFiles << new File("src/test/resources/testng-suite.xml")
         setSuiteXmlFiles(suiteXmlFiles)
     }
+
 
 }
