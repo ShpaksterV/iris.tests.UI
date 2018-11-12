@@ -24,7 +24,7 @@ dependencies {
 test{
 
     useTestNG() {
-        System.setProperty("webdriver.chrome.driver","src/test/WebDrivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver","src/test/WebDrivers/chromedriver")
         systemProperty "driver", "chrome"
         systemProperty "file.encoding", "utf-8"
         useDefaultListeners = true
