@@ -13,6 +13,7 @@ public class DriverFactory {
     public WebDriver getDriver()  {
         driver = new ChromeDriver();
 
+
         this.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         this.driver.manage().window().maximize();
         return this.driver;
