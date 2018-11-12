@@ -27,7 +27,7 @@ task chrometests(type: Test) {
     systemProperty "file.encoding", "utf-8"
     useTestNG() {
         useDefaultListeners = true
-        suiteXmlFilesm << new File("src/test/resources/testng-suite.xml")
+        suiteXmlFiles << new File("src/test/resources/testng-suite.xml")
         setSuiteXmlFiles(suiteXmlFiles)
     }
 }
