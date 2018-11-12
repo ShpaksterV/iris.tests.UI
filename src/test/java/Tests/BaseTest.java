@@ -50,7 +50,7 @@ public class BaseTest {
 
     @BeforeMethod
     protected void beforeMethod() {
-        driver = new DriverFactory().getDriver("chrome");
+        driver = new DriverFactory().getDriver();
        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         driver.manage().window().maximize();

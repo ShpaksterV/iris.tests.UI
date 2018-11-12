@@ -11,12 +11,12 @@ public class DriverFactory {
 
     private WebDriver driver;
 
-    public WebDriver getDriver(String browserType)  {
-        String name = System.getProperty("driver");
-        if (name.equals("chrome")) {
+    public WebDriver getDriver()  {
+
+
             DesiredCapabilities capabilities = DesiredCapabilities.chrome();
             driver = new ChromeDriver(capabilities);
-        }
+
 
 
         this.driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
