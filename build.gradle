@@ -22,9 +22,9 @@ dependencies {
 }
 
 test{
-    systemProperty "webdriver.chrome.driver","src/test/WebDrivers/chromedriver"
+   /* systemProperty "webdriver.chrome.driver","src/test/WebDrivers/chromedriver"
     systemProperty "driver","chrome"
-    systemProperty "file.encoding","UTF-8"
+    systemProperty "file.encoding","UTF-8"*/
 
     useTestNG() {
         useDefaultListeners = true
