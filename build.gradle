@@ -28,7 +28,7 @@ test{
         suiteXmlFiles << new File("src/test/resources/testng-suite.xml")
         setSuiteXmlFiles(suiteXmlFiles)
     }
-    systemProperty "webdriver.chrome.driver","src/test/WebDrivers/chromedriver.exe"
+    systemProperty "webdriver.chrome.driver","src/test/WebDrivers/chromedriver"
     systemProperty "driver", "chrome"
     systemProperty "file.encoding", "utf-8"
 }
