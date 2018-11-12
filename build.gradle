@@ -21,7 +21,7 @@ dependencies {
 
 }
 
-task chrometests(type: Test) {
+test {
     systemProperty "webdriver.chrome.driver","src\\test\\WebDrivers\\chromedriver.exe"
     systemProperty "driver", "chrome"
     systemProperty "file.encoding", "utf-8"
